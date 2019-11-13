@@ -27,7 +27,6 @@ class Puzzle {
         listRestos.clear();
         long sizeList = 0;
         long index = 0;
-        int cont = 0;
         String str = "";
         BigInteger tmpNumber = new BigInteger(Long.toString(n));
         BigInteger resto = tmpNumber.mod(M); // Obtenemos el 1er resto
@@ -50,12 +49,10 @@ class Puzzle {
                 if (index < 0) {
                     index = length_group - 1;
                 }
-
                 break;
             } else {
                 listRestos.add(resto);
                 index = listRestos.size() - 1; // Así obtenemos el último resto que añadimos
-                cont++;
             }
         }
         return listRestos.get((int)index);
